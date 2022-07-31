@@ -55,46 +55,93 @@
 // const participante3 = new Participante("Gonza", 29, "profe")
 // const participante4 = new Participante("Exe", 19, "estudiante")
 
-function suma1(num1, num2){
-    let resultadoSuma = Number(num1) +Number(num2)
-    alert(`El resultado de la suma es ${resultadoSuma}`)
-}
-function resta1(num1, num2){
-    let resultadoResta = Number(num1) - Number(num2)
-    alert(`El resultado de la resta es ${resultadoResta}`)
-}
-function multiplicacion1(num1, num2){
-    let resultadoMultip = Number(num1) * Number(num2)
-    alert(`El resultado de la suma es ${resultadoMultip}`)
-}
-function division1(num1, num2){
-    let resultadoDivision = Number(num1) / Number(num2)
-    alert(`El resultado de la suma es ${resultadoDivision}`)
-}
 
-let pregunta = prompt(`Decime que operacion deseas realizar? Suma, Resta, Multiplicacion o Division`)
+///////////////////entrega de funciones////////////////////
+// function suma1(num1, num2){
+//     let resultadoSuma = Number(num1) +Number(num2)
+//     alert(`El resultado de la suma es ${resultadoSuma}`)
+// }
+// function resta1(num1, num2){
+//     let resultadoResta = Number(num1) - Number(num2)
+//     alert(`El resultado de la resta es ${resultadoResta}`)
+// }
+// function multiplicacion1(num1, num2){
+//     let resultadoMultip = Number(num1) * Number(num2)
+//     alert(`El resultado de la suma es ${resultadoMultip}`)
+// }
+// function division1(num1, num2){
+//     let resultadoDivision = Number(num1) / Number(num2)
+//     alert(`El resultado de la suma es ${resultadoDivision}`)
+// }
+
+// let pregunta = prompt(`Decime que operacion deseas realizar? Suma, Resta, Multiplicacion o Division`)
 
 
-if (pregunta == "suma"){
-    let primNum = prompt(`Ingrese el Primer Numero!!`)
-    let segNum = prompt(`Ingrese el segundo Numero!!`)
-    suma1(primNum, segNum)
-}
-if (pregunta == "resta") {
-    let primNum = prompt(`Ingrese el Primer Numero!!`)
-    let segNum = prompt(`Ingrese el segundo Numero!!`)
-    resta1(primNum, segNum)
-}
-if (pregunta == "multiplicacion"){
-    let primNum = prompt(`Ingrese el Primer Numero!!`)
-    let segNum = prompt(`Ingrese el segundo Numero!!`)
-    multiplicacion1(primNum, segNum)
-}
-if (pregunta == "division"){
-    let primNum = prompt(`Ingrese el Primer Numero!!`)
-    let segNum = prompt(`Ingrese el segundo Numero!!`)
-    division1(primNum, segNum)
-}
-window.location.reload()
+// if (pregunta == "suma"){
+//     let primNum = prompt(`Ingrese el Primer Numero!!`)
+//     let segNum = prompt(`Ingrese el segundo Numero!!`)
+//     suma1(primNum, segNum)
+// }
+// if (pregunta == "resta") {
+//     let primNum = prompt(`Ingrese el Primer Numero!!`)
+//     let segNum = prompt(`Ingrese el segundo Numero!!`)
+//     resta1(primNum, segNum)
+// }
+// if (pregunta == "multiplicacion"){
+//     let primNum = prompt(`Ingrese el Primer Numero!!`)
+//     let segNum = prompt(`Ingrese el segundo Numero!!`)
+//     multiplicacion1(primNum, segNum)
+// }
+// if (pregunta == "division"){
+//     let primNum = prompt(`Ingrese el Primer Numero!!`)
+//     let segNum = prompt(`Ingrese el segundo Numero!!`)
+//     division1(primNum, segNum)
+// }
+// window.location.reload()
 
-    
+
+/////funciondentro de array///////////    
+// function alumno01(){
+
+//     let nombre = "Juan";
+//     let edad = 15;
+//     let rol = "admin";
+
+//     return {
+//         nombre,
+//         edad,
+//         rol
+//     } 
+// }// function alumno02(){
+
+//     let nombre = "Pedro";
+//     let edad = 20;
+//     let rol = "user";
+
+//     return {
+//         nombre,
+//         edad,
+//         rol
+//     }
+// }
+
+// const arrayAlumnos = [
+//     alumno01(),
+//     alumno02()
+// ];
+
+// console.log(arrayAlumnos);
+
+
+//////////////EJEMPLO forEach///////////////////
+// const productos = [
+//     { nombre: "Laptop", precio: 1000 },
+//     { nombre: "Mouse", precio: 50 },
+//     { nombre: "Teclado", precio: 100 }
+// ]
+
+// // Acumular precios con forEach
+// let acumulador = 0;
+// productos.forEach((n)=>{
+//     acumulador += n.precio;
+// })
