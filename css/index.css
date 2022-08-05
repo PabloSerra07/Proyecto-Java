@@ -1,8 +1,55 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {background-color: rgb(169, 221, 26);
+    
+}
 h1 {
     font-size: 50px;
     color: blue;
 }
-p {
+.parrafo {
     font-size: 25px;
     color: crimson;
 }
+
+.card{
+    padding: 10px;
+    width: 80%;
+    max-width: 350px;
+    margin: 2rem auto;
+    border: 2px solid black;
+    text-align: center;
+    background-color: black;
+    box-shadow: 5px 5px gray;
+    
+}
+.imgCard{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.tituloCard{
+    font-size: 30px;
+    color: white;
+}
+.generoCard{
+    font-size: 20px;
+    color: white;
+}
+.anioCard{
+    font-size: 20px;
+    color: white;
+
+}
+.info{
+    padding: 1rem;
+    font-size: 1rem;
+
+}
+/* .estiloTarjetas{
+    display: flex;
+    flex-direction: row;
+} */
