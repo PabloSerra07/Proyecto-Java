@@ -9,25 +9,36 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>JAVASCRIPT</h1>
-    <p class="parrafo">Veremos</p>
+    <nav class="navbar navbar-light bg-success justify-content-between ">
+        <a class="navbar-brand text-light fs-1 text">JAVASCRIPT-GAME</a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="inputBtn">
+                <button id="buscarBtn" class="btn btn-outline-success my-2 my-sm-0 text-light" type="submit">Search</button>
+            </form>
+    </nav>
+    
+    <h1>JavaScript-Game</h1>
+    <p class="parrafo">Plataforma Realizada Con JavaScript</p>
     
     <button id="verCatalgoBtn" class="btn btn-dark">Ver Catalogo !!</button>
+    <button id="ocultarCatalogoBtn" class="btn btn-dark">Ocultar Catalogo !!</button>
     
     <h2>Agregar Juego !!</h2>
     
     <form class="d-flex flex-column bd-highlight">
         <label for="nombre">Ingresar Nombre !!</label>
-        <input type="text" id="nombreInput" name="nombre">
+        <input type="text" id="nombreInput" name="nombre" class="form-control">
         <label for="genero">Ingresar Genero !!</label>
-        <input type="text" id="generoInput" name="genero">
+        <input type="text" id="generoInput" name="genero" class="form-control">
         <label for="anio">Ingresar Año !!</label>
-        <input type="text" name="año" id="añoInput">
+        <input type="text" name="año" id="añoInput" class="form-control">
         <!-- <label for="agregarImg">Agregr Imagen !!</label>
-        <input type="image" name="imageInput" id="agregarImg"> -->
-    </form>
+        <input type="image" name="imageInput" id="agregarImg" class="form-control"> -->
+        </form>
     
-    <button id="guardarJuegoBtn" class="btn btn-dark">Guardar Juego</button>
+        <button id="guardarJuegoBtn" class="btn btn-dark">Guardar Juego</button>
+    
+
     <div id="juegos"></div>
     
     
@@ -45,7 +56,7 @@
     
     
     
-    
+
     <script src="./JS/entrega.js"></script> 
     <!-- <script src="./JS/index.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
