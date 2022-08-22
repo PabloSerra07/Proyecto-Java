@@ -1,3 +1,23 @@
+let entrega = document.getElementById("pruebaBtn")
+pruebaBtn.addEventListener("click", ()=>{
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'no puedo solucionar el error en mi buscador!!!',
+        
+    })})
+
+
+    nombre = prompt ('Por favor introduce tu nombre:')
+    
+    function mostrarMensaje1() { 
+        (nombre =="")? alert('No has introducido ningún nombre') : alert('Hola '+nombre + '. Bienvenido a esta página web.')
+        edad = prompt ('¿Cuál es tu edad?')
+        edad = Number(edad);
+        (edad >20 && edad <30 )? alert ('Eres un niño.') : alert ('Eres mayor de edad.')
+        }
+mostrarMensaje1()
+
 class nombreJuegos{
     constructor(id, nombre, genero, año,imagen){
         this.id = id,
@@ -35,6 +55,10 @@ if(localStorage.getItem("juegos")){
     localStorage.setItem("juegos", JSON.stringify(juegos))
 }
 
+//////desestructurado de array de storage/////
+const [,,a,b] = juegos
+console.log(b)
+console.log(a.año)
 
 
 //////tarjeta//////
@@ -91,27 +115,43 @@ guardarJuegoBtn.addEventListener("click", guardarJuego)
 
 
 
-// ///// Buscar Juegos //////
-// let inputForm = document.getElementById("inputBtn")
-// let buscarJuego = document.getElementById("buscarBtn")
-// buscarJuego.addEventListener("click", ()=>{console.log(`${inputForm.value}`)} )
+/// Buscar Juegos //////
+// let busquedaNueva = document.getElementById("busqueda")
+// busquedaNueva.setAttribute("class","estiloTarjetas")
 
-
-
-//     let ingNombre = prompt(`Ingrese el Nombre del Juego`)
-//     let busqueda = juegos.filter((juego)=>juego.nombre == ingNombre)
-  
+// function busJuego(formBox){
+//     let busqueda = juegos.filter((juego)=>juego.nombre == formBox)
+//     console.table(busqueda)
     
-    
-    
-//     if(busqueda == false){
-//         prompt(`Su Juego NO se encuentra en Nuestro Catalogo!!`)
-//     }else{
+//     if(busqueda.length > 0){
+        
+//         juegos.forEach((juego) =>{
+//         let verBusqueda = document.createElement("div")
+//         verBusqueda.innerHTML = `<section id="${juego.id + "i"}" class="card">
+//                                     <h2 class="tituloCard">${juego.nombre}</h2>
+//                                     <img class="imgCard" src="${juego.imagen}" alt="${juego.titulo}">
+//                                     <div class="info">
+//                                         <p class="generoCard">${juego.genero}</p>
+//                                         <p id="anioCard" class="anioCard">${juego.año}</p>
+//                                         <button id="btnInfoJuegos" class="btn btn-dark">Ver Mas</button>
+//                                     </div>
+//                             </section>`
+// busquedaNueva.appendChild(verBusqueda)
 
+// })
+// }else{
+        
+//         Swal.fire({
+//             imageUrl: 'https://placeholder.pics/svg/300x1500',
+//             imageHeight: 1500,
+//             imageAlt: 'A tall image'
+//         })
+        
 //     }
+// }
+//     document.getElementById("buscarForm").addEventListener("submit", function(e) {
+//         let formBox = document.getElementById('inputText').value;
+//         busJuego(formBox);
+//     } )
 
 
-//     buscarJuego.addEventListener("click",busquedaPorNombre)
-    
- 
-// function busquedaPorNombre(){}

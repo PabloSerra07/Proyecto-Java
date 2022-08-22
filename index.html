@@ -5,24 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./css/index.css">
     <title>Document</title>
 </head>
 <body>
     <nav class="navbar navbar-light bg-success justify-content-between ">
         <a class="navbar-brand text-light fs-1 text">JAVASCRIPT-GAME</a>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="inputBtn">
-                <button id="buscarBtn" class="btn btn-outline-success my-2 my-sm-0 text-light" type="submit">Search</button>
-            </form>
+        <form id="buscarForm" class="form-inline" method="get" >
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="inputField" id="inputText">
+            <button class="btn btn-outline-success my-2 my-sm-0 text-light" type="submit" value="submit" id="inputSearch">Search</button>
+        </form>
     </nav>
     
-    <h1>JavaScript-Game</h1>
+    <button id="pruebaBtn" class="btn btn-dark">PRUEBA</button mar>
+    
+    <h1 >JavaScript-Game</h1>
     <p class="parrafo">Plataforma Realizada Con JavaScript</p>
     
-    <button id="verCatalgoBtn" class="btn btn-dark">Ver Catalogo !!</button>
-    <button id="ocultarCatalogoBtn" class="btn btn-dark">Ocultar Catalogo !!</button>
-    
+    <section class="catalogo">
+        <button id="verCatalgoBtn" class="btn btn-dark ">Ver Catalogo !!</button>
+        <button id="ocultarCatalogoBtn" class="btn btn-dark ">Ocultar Catalogo !!</button>
+    </section>
+        
     <h2>Agregar Juego !!</h2>
     
     <form class="d-flex flex-column bd-highlight">
@@ -33,24 +38,15 @@
         <label for="anio">Ingresar Año !!</label>
         <input type="text" name="año" id="añoInput" class="form-control">
         <!-- <label for="agregarImg">Agregr Imagen !!</label>
-        <input type="image" name="imageInput" id="agregarImg" class="form-control"> -->
-        </form>
+        <input type="image" name="imageInput" id="agregarImg" class="form-control"> -->   
+    </form>
     
         <button id="guardarJuegoBtn" class="btn btn-dark">Guardar Juego</button>
     
 
     <div id="juegos"></div>
-    
-    
-    <!-- <section class="card">
-        <h2 class="tituloCard">Super Mario</h2>
-        <img class="imgCard" src="./img/Super Mario.jpg" alt="">
-        <div class="info">
-            <p class="generoCard">Genero</p>
-            <p id="anioCard" class="anioCard">Año</p>
-        </div>
-        
-    </section> -->
+    <div id="busqueda"></div>
+
     
     
     
@@ -59,7 +55,7 @@
 
     <script src="./JS/entrega.js"></script> 
     <!-- <script src="./JS/index.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
