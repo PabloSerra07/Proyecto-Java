@@ -1,64 +1,12 @@
-let entrega = document.getElementById("pruebaBtn")
-pruebaBtn.addEventListener("click", ()=>{
-    Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'no puedo solucionar el error en mi buscador!!!',
-        
-    })})
-
-
-    nombre = prompt ('Por favor introduce tu nombre:')
-    
-    function mostrarMensaje1() { 
-        (nombre =="")? alert('No has introducido ningún nombre') : alert('Hola '+nombre + '. Bienvenido a esta página web.')
-        edad = prompt ('¿Cuál es tu edad?')
-        edad = Number(edad);
-        (edad >20 && edad <30 )? alert ('Eres un niño.') : alert ('Eres mayor de edad.')
-        }
-mostrarMensaje1()
-
-class nombreJuegos{
-    constructor(id, nombre, genero, año,imagen){
-        this.id = id,
-        this.nombre = nombre,
-        this.genero = genero,
-        this.año = año
-        this.imagen = imagen
-    }
-
-
-    mostrarJuegos(){
-        console.log(`Este juego es ${this.nombre}, Genero ${this.genero}  La id del juego es ${this.id}`)
-    }
-}
-
-const juego1 = new nombreJuegos (1,"Super Mario","Accion",1985, "./img/Super Mario.jpg")
-
-const juego2 = new nombreJuegos (2,"Sonic","Aventura",1984, "./img/sonic.jpg")
-
-const juego3 = new nombreJuegos (3,"Contra","Shoter",1986, "./img/contra.jpg")
-
-const juego4 = new nombreJuegos (4,"Islander","Aventura",1987, "./img/Islander.jpg")
-
-///estanteria ///
-let juegos = []
-
-/////eventos DOM////
-
-
 ///inicio de storag /////
-if(localStorage.getItem("juegos")){
-    juegos = JSON.parse(localStorage.getItem("juegos"))
-}else{
-    juegos.push(juego1,juego2,juego3,juego4)
-    localStorage.setItem("juegos", JSON.stringify(juegos))
-}
+// if(localStorage.getItem("juegos")){
+//     juegos = JSON.parse(localStorage.getItem("juegos"))
+// }else{
+//     juegos.push(juego1,juego2,juego3,juego4)
+//     localStorage.setItem("juegos", JSON.stringify(juegos))
+// }
 
-//////desestructurado de array de storage/////
-const [,,a,b] = juegos
-console.log(b)
-console.log(a.año)
+
 
 
 //////tarjeta//////
@@ -116,6 +64,35 @@ guardarJuegoBtn.addEventListener("click", guardarJuego)
 
 
 /// Buscar Juegos //////
+
+let inputBuscar = document.getElementById("inputText")
+inputBtn.addEventListener('click', (e)=>{
+    //function de buscado
+    e.preventDefault()
+    // console.log("click");
+    // console.log(inputBuscar.value.toLowerCase());
+    let verJuego = juegos.filter(juegos =>(juegos.nombre.toLowerCase() == inputBuscar.value.toLowerCase()))
+    console.log(verJuego);
+    if(verJuego.length == 0){
+        Swal.fire(
+            'El Juego NO Se Encuentra En nuestro Catalogo',
+            'Vuelva a Intentar !!!',
+            'warning'
+        )
+        }else{
+            
+        let busqueda = document.getElementById("busqueda") 
+        busqueda.innerText = verJuego[0].nombre
+
+    }
+})
+
+
+
+
+
+
+
 // let busquedaNueva = document.getElementById("busqueda")
 // busquedaNueva.setAttribute("class","estiloTarjetas")
 
@@ -154,4 +131,11 @@ guardarJuegoBtn.addEventListener("click", guardarJuego)
 //         busJuego(formBox);
 //     } )
 
+
+////BTN INFO DE JUEGOS/////
+
+// let btnInfoJuegos = document.getElementById("btnInfoJuegos")
+// btnInfoJuegos.addEventListener("click",()=>{ 
+
+// })
 

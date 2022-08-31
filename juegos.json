@@ -1,0 +1,123 @@
+[
+    {
+        "id": 1,
+        "nombre": "Super Mario",
+        "genero": "aventura",
+        "año": 1987,
+        "imagen": "./img/Super Mario.jpg",
+        "info": "Nace la saga por excelencia de los videojuegos. Un clásico inmortal, y el segundo juego más vendido de la historia de las consolas."
+    },
+    {
+        "id": 2,
+        "nombre": "Sonic",
+        "genero": "aventura",
+        "año": 1984,
+        "imagen": "./img/sonic.jpg",
+        "info": "Sonic es un erizo azul de 15 años, 1 metro y 35 kilogramos que tiene la habilidad de correr a la velocidad del sonido, una característica que se muestra en la mayoría de sus juegos, siendo, además, su seña de identidad."
+
+    },
+    {
+        "id": 3,
+        "nombre": "Contra",
+        "genero": "Shoter",
+        "año": 1986,
+        "imagen": "./img/contra.jpg",
+        "info": "Contra se desarrolla en el futuro lejano del año 2633 d.C., donde la malvada Organización Red Falcon ha establecido una base en el ficticio archipiélago de Galuga cerca de Nueva Zelanda en un complot para acabar con la humanidad"
+    },
+    {
+        "id": 4,
+        "nombre": "Islander",
+        "genero": "Aventura",
+        "año": 1987,
+        "imagen": "./img/Islander.jpg",
+        "info": "Apartado técnico más que vistoso y diversión sencilla, en un curioso arcade en el que los huevos ocultan patinetes. Muy parecido al Wonder Boy de SEGA."
+    },
+    {
+        "id": 5,
+        "nombre": "Excitebike",
+        "genero": "Carreras",
+        "año": 1986,
+        "imagen": "./img/excitebike.jpg",
+        "info": "Carreras de motos contra el crono, rivales y obstáculos. Para hacer podio, hay cuidar la temperatura del motor y los saltos. Dificultad por las nubes"
+    },
+    {
+        "id": 6,
+        "nombre": "Ice Climber",
+        "genero": "Aventura",
+        "año": 1986,
+        "imagen": "./img/iceclimber.jpg",
+        "info": "Popo y Nala tienen que destrozar 32 techos helados a base de martillazos, y al mismo tiempo acabar con osos polares, aves y focas"
+    },
+    {
+        "id": 7,
+        "nombre": "Tennis",
+        "genero": "Deporte",
+        "año": 1986,
+        "imagen": "./img/tennis.jpg",
+        "info": "La Famicom también tuvo de inicio su juego de tenis, con diferentes pistas, partidos de dobles y “singles”, ¡y Mario de juez de silla!"
+    },
+    {
+        "id": 8,
+        "nombre": " Donkey Kong",
+        "genero": "Aventura",
+        "año": 1986,
+        "imagen": "./img/donkeykong.jpg",
+        "info": ""
+    },
+    {
+        "id": 9,
+        "nombre": "Kung Fu",
+        "genero": "Accion",
+        "año": 1987,
+        "imagen": "./img/kungfu.jpg",
+        "info": ""
+    },
+    {
+        "id": 10,
+        "nombre": "Duck Hunt",
+        "genero": "Shoter",
+        "año": 1987,
+        "imagen": "./img/duckhunt.jpg",
+        "info": "El arma Nintendo Zapper se estrenó con un sencillo juego de cazar patos. Eso sí, también tiene un modo para disparar al plato, que es más “correcto”"
+    },
+    {
+        "id": 11,
+        "nombre": "Galaga",
+        "genero": "Shoter",
+        "año": 1988,
+        "imagen": "./img/galaga.jpg",
+        "info": "Inmortal “matamarcianos”, heredero de Space Invaders y secuela de Galaxian. Una moderna curiosidad: ¡sale en la peli de Los Vengadores!"
+    },
+    {
+        "id": 12,
+        "nombre": "Tetris",
+        "genero": "Puzle",
+        "año": 1990,
+        "imagen": "./img/tetris.jpg",
+        "info": "El puzle entre los puzles, y una recreativa que enganchó al mundo entero por igual: siete tetrominós para picarnos a todos... lo vimos hasta en sueños."
+    },
+    {
+        "id": 13,
+        "nombre": "Pac-Man",
+        "genero": "Estrategia",
+        "año": 1990,
+        "imagen": "./img/pacman.jpg",
+        "info": "NES no se quedó sin su versión del arcade por excelencia. El “come-cocos” tiene nada menos que 255 pantallas. ¿Aceptas el reto?"
+    },
+    {
+        "id": 14,
+        "nombre": "Baseball",
+        "genero": "Deporte",
+        "año": 1991,
+        "imagen": "./img/baseball.jpg",
+        "info": "Juego de Baseball del catálogo inicial que llegó a Europa con 8 años de retraso. Simulador sencillo, para dos jugadores, y con 6 equipos"
+    },
+    {
+        "id": 15,
+        "nombre": "Lode Runner",
+        "genero": "Estrategia",
+        "año": 1987,
+        "imagen": "./img/runner.jpg",
+        "info": "Varios sacos de oro en pantalla, un grupo de guardianes y una serie de escaleras. Resuelve el puzle… ¡o crea tus propios niveles con su editor!"
+    }
+]
