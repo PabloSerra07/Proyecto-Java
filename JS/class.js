@@ -8,13 +8,7 @@ class nombreJuegos{
         this.info = info
     }
 }
-// const juego1 = new nombreJuegos (1,"Super Mario","Accion",1985, "./img/Super Mario.jpg")
 
-// const juego2 = new nombreJuegos (2,"Sonic","Aventura",1984, "./img/sonic.jpg")
-
-// const juego3 = new nombreJuegos (3,"Contra","Shoter",1986, "./img/contra.jpg")
-
-// const juego4 = new nombreJuegos (4,"Islander","Aventura",1987, "./img/Islander.jpg")
 
 ///estanteria ///
 let juegos = []

@@ -1,10 +1,8 @@
-///inicio de storag /////
-// if(localStorage.getItem("juegos")){
-//     juegos = JSON.parse(localStorage.getItem("juegos"))
-// }else{
-//     juegos.push(juego1,juego2,juego3,juego4)
-//     localStorage.setItem("juegos", JSON.stringify(juegos))
-// }
+//////// Para ver info/////////////
+
+
+
+
 
 
 
@@ -13,9 +11,10 @@
 
 let tarjetaNueva = document.getElementById("juegos")
 tarjetaNueva.setAttribute("class","estiloTarjetas")
-
+busqueda.setAttribute("class","estiloTarjetas")
 
 function verCatalogo(){
+    busqueda.innerHTML = ""
     tarjetaNueva.innerHTML =""
     juegos.forEach((juego) =>{
     let nuevoJuego = document.createElement("div")
@@ -25,10 +24,24 @@ function verCatalogo(){
                                     <div class="info">
                                         <p class="generoCard">${juego.genero}</p>
                                         <p id="anioCard" class="anioCard">${juego.año}</p>
-                                        <button id="btnInfoJuegos" class="btn btn-dark">Ver Mas</button>
+                                        <button id="btnInfoJuegos${juego.id}" class="btn btn-dark ">Ver Mas</button>
                                     </div>
                             </section>`
-tarjetaNueva.appendChild(nuevoJuego)
+                            tarjetaNueva.appendChild(nuevoJuego)
+
+
+                            let btnInfoJuegos = document.getElementById(`btnInfoJuegos${juego.id}`)
+                            btnInfoJuegos.addEventListener("click", ()=>{
+                                                    Swal.fire({
+                                                    title: `${juego.nombre}`,
+                                                    text: `${juego.info}`,
+                                                    imageUrl: `${juego.imagen}`,
+                                                    imageWidth: 400,
+                                                    imageHeight: 200,
+                                                    imageAlt: 'Custom image',
+                                            
+                                                    })
+})
 })
 }
 ///////-----catalogo-----///////////
@@ -37,6 +50,7 @@ verCatalgoBtn.addEventListener("click", verCatalogo)
 
 function ocultarCatalogo(){
     tarjetaNueva.innerHTML =""
+    
 }
 
 let ocultarCatalogoBtn = document.getElementById("ocultarCatalogoBtn")
@@ -50,7 +64,7 @@ function guardarJuego(){
     let generoInput = document.getElementById("generoInput")
     let añoInput = document.getElementById("añoInput")
     let imageInput = document.getElementById("imageInput")
-    let juegoCreado = new nombreJuegos(juegos.length+1, nombreInput.value, generoInput.value, añoInput.value, "img/Super Mario.jpg" )
+    let juegoCreado = new nombreJuegos(juegos.length+1, nombreInput.value, generoInput.value, añoInput.value, imageInput.value )
     juegos.push(juegoCreado)
     localStorage.setItem("juegos", JSON.stringify(juegos))
     
@@ -69,10 +83,8 @@ let inputBuscar = document.getElementById("inputText")
 inputBtn.addEventListener('click', (e)=>{
     //function de buscado
     e.preventDefault()
-    // console.log("click");
-    // console.log(inputBuscar.value.toLowerCase());
-    let verJuego = juegos.filter(juegos =>(juegos.nombre.toLowerCase() == inputBuscar.value.toLowerCase()))
-    console.log(verJuego);
+    let verJuego = juegos.filter(juegos =>(juegos.nombre.toLowerCase().includes(inputBuscar.value.toLowerCase())))
+    
     if(verJuego.length == 0){
         Swal.fire(
             'El Juego NO Se Encuentra En nuestro Catalogo',
@@ -80,62 +92,44 @@ inputBtn.addEventListener('click', (e)=>{
             'warning'
         )
         }else{
-            
-        let busqueda = document.getElementById("busqueda") 
-        busqueda.innerText = verJuego[0].nombre
+            let busqueda = document.getElementById("busqueda")
+            tarjetaNueva.innerHTML =""
+            verJuego.forEach((juego) =>{
+                let busquedaJuego = document.createElement("div")
+                busquedaJuego.innerHTML = `<section id="${juego.id}" class="card">
+                                    <h2 class="tituloCard">${juego.nombre}</h2>
+                                    <img class="imgCard" src="${juego.imagen}" alt="${juego.titulo}">
+                                    <div class="info">
+                                    <p class="generoCard">${juego.genero}</p>
+                                    <p id="anioCard" class="anioCard">${juego.año}</p>
+                                    <button  id="btnInfoJuegos${juego.id}" class="btn btn-dark ">Ver Mas</button>
+                                    </div>
+                                    </section>`
 
-    }
-})
-
-
-
-
-
-
-
-// let busquedaNueva = document.getElementById("busqueda")
-// busquedaNueva.setAttribute("class","estiloTarjetas")
-
-// function busJuego(formBox){
-//     let busqueda = juegos.filter((juego)=>juego.nombre == formBox)
-//     console.table(busqueda)
+                                    busqueda.appendChild(busquedaJuego)
+                                    
+                                    let btnInfoJuegos = document.getElementById(`btnInfoJuegos${juego.id}`)
+                                    btnInfoJuegos.addEventListener("click", ()=>{
+                                                    Swal.fire({
+                                                    title: `${juego.nombre}`,
+                                                    text: `${juego.info}`,
+                                                    imageUrl: `${juego.imagen}`,
+                                                    imageWidth: 400,
+                                                    imageHeight: 200,
+                                                    imageAlt: 'Custom image',
+                                            
+                                                    })
+        
+                                    })
+            })   
+        }
     
-//     if(busqueda.length > 0){
-        
-//         juegos.forEach((juego) =>{
-//         let verBusqueda = document.createElement("div")
-//         verBusqueda.innerHTML = `<section id="${juego.id + "i"}" class="card">
-//                                     <h2 class="tituloCard">${juego.nombre}</h2>
-//                                     <img class="imgCard" src="${juego.imagen}" alt="${juego.titulo}">
-//                                     <div class="info">
-//                                         <p class="generoCard">${juego.genero}</p>
-//                                         <p id="anioCard" class="anioCard">${juego.año}</p>
-//                                         <button id="btnInfoJuegos" class="btn btn-dark">Ver Mas</button>
-//                                     </div>
-//                             </section>`
-// busquedaNueva.appendChild(verBusqueda)
+    })
 
-// })
-// }else{
-        
-//         Swal.fire({
-//             imageUrl: 'https://placeholder.pics/svg/300x1500',
-//             imageHeight: 1500,
-//             imageAlt: 'A tall image'
-//         })
-        
-//     }
-// }
-//     document.getElementById("buscarForm").addEventListener("submit", function(e) {
-//         let formBox = document.getElementById('inputText').value;
-//         busJuego(formBox);
-//     } )
+    
 
 
-////BTN INFO DE JUEGOS/////
 
-// let btnInfoJuegos = document.getElementById("btnInfoJuegos")
-// btnInfoJuegos.addEventListener("click",()=>{ 
 
-// })
+
 
