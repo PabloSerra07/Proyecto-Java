@@ -1,13 +1,4 @@
-//////// Para ver info/////////////
-
-
-
-
-
-
-
-
-//////tarjeta//////
+/////////////tarjeta//////
 
 let tarjetaNueva = document.getElementById("juegos")
 tarjetaNueva.setAttribute("class","estiloTarjetas")
@@ -64,7 +55,7 @@ function guardarJuego(){
     let generoInput = document.getElementById("generoInput")
     let añoInput = document.getElementById("añoInput")
     let imageInput = document.getElementById("imageInput")
-    let juegoCreado = new nombreJuegos(juegos.length+1, nombreInput.value, generoInput.value, añoInput.value, imageInput.value )
+    let juegoCreado = new nombreJuegos(juegos.length+1, nombreInput.value, generoInput.value, añoInput.value, "./img/Super Mario.jpg" )
     juegos.push(juegoCreado)
     localStorage.setItem("juegos", JSON.stringify(juegos))
     
